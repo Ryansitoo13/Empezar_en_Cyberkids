@@ -6,6 +6,34 @@
     <title>Selecciona tu Edad</title>
     <script defer src="script.js"></script>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Hace que el fondo cubra toda la pantalla con un tono blanco-grisáceo */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: #F2F2F2; /* Blanco con un toque de gris */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Ajusta el contenedor para que no se vea pequeño */
+        .container {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 90%;
+        }
+
+        /* Elimina margen extra si existe */
+        h1, p, input, button {
+            margin: 10px 0;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -14,46 +42,5 @@
         <input type="number" id="edadInput" placeholder="Escribe tu edad">
         <button onclick="verificarEdad()">Continuar</button>
     </div>
-
-    <!-- Pie de página con la sección de Contacto -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-section">
-                <h3>Enlaces útiles</h3>
-                <ul>
-                    <li><a href="https://cyberkids.odoo.com/" target="_blank" rel="noopener noreferrer">Inicio</a></li>
-                    <li><a href="#">Sobre nosotros</a></li>
-                    <li><a href="#">Servicios</a></li>
-                    <li><a href="#">Legal</a></li>
-                    <li><a href="https://cyberkids.odoo.com/contactus">Contáctenos</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Sobre nosotros</h3>
-                <p>Somos un equipo de personas cuyo objetivo es mejorar la concientización acerca de la ciberseguridad en la niñez en Costa Rica.</p>
-                <p>Estamos disponibles para adaptarnos a nuevas tecnologías relevantes en este campo.</p>
-            </div>
-            <div class="footer-section">
-                <h3>Contáctenos</h3>
-                <p>📩 cyberkidsoficial@gmail.com</p>
-                <p>📞 +1 555-555-5556</p>
-                <div class="social-icons">
-                    <a href="https://facebook.com" target="_blank">
-                        <img src="https://raw.githubusercontent.com/Ryansitoo13/Actividadrelazionarcyberkids/main/facebook.png" alt="Facebook"/>
-                    </a>
-                    <a href="https://twitter.com" target="_blank">
-                        <img src="https://raw.githubusercontent.com/Ryansitoo13/Actividadrelazionarcyberkids/main/twitter.png" alt="Twitter"/>
-                    </a>
-                    <a href="https://linkedin.com" target="_blank">
-                        <img src="https://raw.githubusercontent.com/Ryansitoo13/Actividadrelazionarcyberkids/main/linkedin.png" alt="LinkedIn"/>
-                    </a>
-                    <a href="https://cyberkids.odoo.com/" target="_blank">
-                        <img src="https://raw.githubusercontent.com/Ryansitoo13/Actividadrelazionarcyberkids/main/home-icon-silhouette.png" alt="Inicio"/>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <p class="footer-copy">Derechos de autor y nombre de la empresa</p>
-    </footer>
 </body>
 </html>
