@@ -1,11 +1,15 @@
-/* Fondo colorido para niños */
+/* Fondo con tono blanco-grisáceo */
 body {
-    background: linear-gradient(135deg, #FF0000, #FFD700);
+    background: #F2F2F2; /* Color de fondo blanco con un toque gris */
     font-family: 'Comic Sans MS', cursive, sans-serif;
     text-align: center;
-    color: white;
+    color: black;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Para que ocupe toda la pantalla */
 }
 
 /* Contenedor principal */
@@ -13,7 +17,6 @@ body {
     background: white;
     color: black;
     max-width: 500px;
-    margin: 100px auto;
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
@@ -46,47 +49,7 @@ button:hover {
     background: #D32F2F;
 }
 
-/* Pie de página */
+/* Eliminamos el pie de página */
 footer {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 50px;
-}
-
-.footer-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.footer-section {
-    max-width: 300px;
-    text-align: left;
-}
-
-.footer-section h3 {
-    color: #FFD700;
-}
-
-.footer-section ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-section ul li a {
-    text-decoration: none;
-    color: white;
-}
-
-.footer-copy {
-    margin-top: 20px;
-    font-size: 14px;
-}
-
-/* Iconos sociales */
-.social-icons img {
-    width: 30px;
-    margin: 5px;
+    display: none;
 }
