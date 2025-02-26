@@ -29,6 +29,19 @@
             text-align: center;
         }
 
+        /* Título con colores en "CyberKids" y fondo suave */
+        .titulo-cyberkids {
+            background-color: rgba(0, 0, 0, 0.05); /* Fondo suave */
+            padding: 10px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+
+        .cyberkids span:nth-child(1) { color: blue; } /* C */
+        .cyberkids span:nth-child(2) { color: black; } /* yber */
+        .cyberkids span:nth-child(3) { color: red; } /* k */
+        .cyberkids span:nth-child(4) { color: green; } /* ids */
+
         /* Input de la edad */
         input {
             width: 50%;
@@ -59,10 +72,16 @@
 </head>
 <body>
     <div class="container">
-        <h1>¡Bienvenido a CyberKids!</h1>
+        <h1 class="titulo-cyberkids">
+            ¡Bienvenido a 
+            <span class="cyberkids">
+                <span>C</span><span>yber</span><span>k</span><span>ids</span>
+            </span>!
+        </h1>
         <p>Ingresa tu edad para continuar:</p>
         <input type="number" id="edadInput" placeholder="Escribe tu edad">
         <button onclick="verificarEdad()">Continuar</button>
     </div>
 </body>
 </html>
+
