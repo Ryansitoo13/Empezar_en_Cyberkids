@@ -22,6 +22,20 @@ body {
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* Estilos para el título "¡Bienvenido a CyberKids!" */
+.titulo-cyberkids {
+    background-color: rgba(0, 0, 0, 0.05); /* Fondo suave y apenas visible */
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+/* Colores personalizados en "CyberKids" */
+.cyberkids span:nth-child(1) { color: blue; }  /* C */
+.cyberkids span:nth-child(2) { color: black; } /* yber */
+.cyberkids span:nth-child(3) { color: red; }   /* k */
+.cyberkids span:nth-child(4) { color: green; } /* ids */
+
 /* Input de la edad */
 input {
     width: 50%;
