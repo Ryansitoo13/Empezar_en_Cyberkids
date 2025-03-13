@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Selecciona tu Edad</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script> <!-- Enlace al archivo JS externo -->
     <style>
-        /* Fondo gris claro en toda la pantalla */
-        html, body {
-            background-color: #F2F2F2; /* Blanco con un toque de gris */
+        /* Fondo con tono blanco-grisáceo */
+        body {
+            background: #F2F2F2;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            text-align: center;
+            color: black;
             margin: 0;
             padding: 0;
-            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
+            height: 100vh;
         }
 
         /* Contenedor principal */
@@ -26,20 +27,20 @@
             padding: 20px;
             border-radius: 15px;
             box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-            text-align: center;
         }
 
-        /* Título con colores en "CyberKids" y fondo suave */
+        /* Estilos para el título "¡Bienvenido a CyberKids!" */
         .titulo-cyberkids {
-            background-color: rgba(0, 0, 0, 0.05); /* Fondo suave */
+            background-color: rgba(0, 0, 0, 0.05);
             padding: 10px;
             border-radius: 10px;
             display: inline-block;
         }
 
-        .cyberkids span:nth-child(1) { color: blue; } /* C */
+        /* Colores personalizados en "CyberKids" */
+        .cyberkids span:nth-child(1) { color: blue; }  /* C */
         .cyberkids span:nth-child(2) { color: black; } /* yber */
-        .cyberkids span:nth-child(3) { color: red; } /* k */
+        .cyberkids span:nth-child(3) { color: red; }   /* k */
         .cyberkids span:nth-child(4) { color: green; } /* ids */
 
         /* Input de la edad */
@@ -68,21 +69,44 @@
         button:hover {
             background: #D32F2F;
         }
+
+        /* Eliminamos el pie de página */
+        footer {
+            display: none;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1 class="titulo-cyberkids">
-    ¡Bienvenido a 
-    <span class="cyberkids">
-        <span style="color: blue;">C</span><span style="color: blue;">y</span><span style="color: black;">ber</span>
-        <span style="color: red;">k</span><span style="color: green;">ids</span>
-    </span>!
-</h1>
+            ¡Bienvenido a 
+            <span class="cyberkids">
+                <span style="color: blue;">C</span><span style="color: black;">yber</span>
+                <span style="color: red;">k</span><span style="color: green;">ids</span>
+            </span>!
+        </h1>
         <p>Ingresa tu edad para continuar:</p>
         <input type="number" id="edadInput" placeholder="Escribe tu edad">
         <button onclick="verificarEdad()">Continuar</button>
     </div>
+
+    <script>
+        function verificarEdad() {
+            let edad = parseInt(document.getElementById("edadInput").value);  
+
+            if (!isNaN(edad) && edad > 0) {
+                if (edad >= 12) {
+                    // Redirección asegurando que se abra fuera del iframe
+                    window.top.location.href = "https://cyberkids.odoo.com/exploradores-avanzados";
+                } else {
+                    alert("Por favor, ingresa una edad válida.");
+                }
+            } else {
+                alert("Por favor, ingresa una edad válida.");
+            }
+        }
+    </script>
 </body>
 </html>
+
 
